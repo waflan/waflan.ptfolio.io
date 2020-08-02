@@ -11,12 +11,13 @@
         width: 100%;
     }
     div.HomeBG{
-        inline-size: auto;
+        /* inline-size: auto; */
     }
 }
 .HomeBG{
     width: inherit;
-    height: 100vh;
+    height: inherit;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
 }
@@ -41,7 +42,7 @@
     background-position: center;
 }
 .HomeContent{
-    margin-top: 40vh;
+    margin-top: 30vh;
     max-width: 100%;
     width: inherit;
     top: 0;
@@ -51,6 +52,7 @@
 }
 .HomeContent>div{
     width: calc(100%/3);
+    margin-top: 10vh;
     height: 30vh;
     display: flex;
     justify-content: center;
@@ -73,20 +75,17 @@
     height: 100%;
     width: 100%;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 .imgBox>img{
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    object-fit: fill;
+    height: 30vh;
+    width: auto;
     transition: 0.3s;
     image-rendering: pixelated;
     
-}
-.HomeContent h1{
-    text-align: center;
-    font-size: 5rem;
-    line-height: 0;
-    color: var(--bg-color-1);
 }
 .illLink{
     letter-spacing: -1.4rem;

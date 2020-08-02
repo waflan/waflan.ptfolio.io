@@ -75,4 +75,15 @@ for (let i = 0; i < ill.length; i++) {
     ill[i].addEventListener("mouseleave",function() {
         ill[i].setAttribute("switch",-1);
     });
+    let parent =  ill[i].parentElement;
+    let titles = parent.getElementsByTagName("h1");
+    for (let j = 0; j < titles.length; j++) {
+        titles[j].addEventListener("mouseenter",function() {
+            ill[i].setAttribute("switch",1);
+        });
+        titles[j].addEventListener("mouseleave",function() {
+            ill[i].setAttribute("switch",-1);
+        });
+    }
 }
+

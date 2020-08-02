@@ -1,7 +1,7 @@
 //　背景画像
-let images = ["pinky.gif","cmk.png","chu.png","skmdl.png"];
+let images = ["scr-psy.gif","cmk.png","skmdl.png"];
 let bg = document.getElementsByClassName("HomeContainerBG").item(0);
-let rowNum=5,colNum=10;
+let rowNum=4,colNum=10;
 let pxColumn = parseInt(bg.clientHeight/colNum);
 let pxRow = parseInt(bg.clientWidth/rowNum);
 let imageIndex =0;

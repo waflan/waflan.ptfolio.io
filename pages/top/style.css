@@ -80,7 +80,7 @@
 }
 .imgBox>img{
     position: absolute;
-    object-fit: fill;
+    object-fit: contain;
     height: 30vh;
     width: auto;
     transition: 0.3s;

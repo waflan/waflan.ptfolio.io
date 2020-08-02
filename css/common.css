@@ -7,6 +7,7 @@
     font-size: 20px;
     --bg-color-0: hsl(215, 65%, 10%);
     --bg-color-1: hsl(218, 57%, 5%);
+    --bg-color-2: hsl(216, 100%, 92%);
     --text-color-0: hsl(215, 100%, 83%);
     --text-color-1: hsl(214, 44%, 30%);
     --text-color-2: hsl(215, 65%, 10%);
@@ -77,6 +78,9 @@ body{
 }
 .bg-1{
     background-color: var(--bg-color-1);
+}
+.bg-2{
+    background-color: var(--bg-color-2);
 }
 .tx-0{
     color: var(--text-color-0);

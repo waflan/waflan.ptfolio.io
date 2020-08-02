@@ -19,7 +19,7 @@
 				<li><a href="/ptfolio/pages/top/index.html">Home</a></li>
 				<li><a href="">制作一覧</a></li>
 				<li><a href="">自己紹介</a></li>
-				<li><a href="/ptfolio/pages/illusts/index.html">画廊</a></li>
+				<li><a href="">画廊</a></li>
 				<li><a href="/ptfolio/pages/3D/index.html">3D</a></li>
 			</ul>
 		</nav>
@@ -35,7 +35,7 @@
 						<div class="HomeContainerBG"></div>
 						<div class="HomeContent">
 							<div>
-								
+								<a href=""><img src=""></a>
 							</div>
 							<div>
 								<div id="cubeParent" style="transform-style: preserve-3d;perspective: 500px;width: 200px; transition: 0.5s;">
@@ -43,14 +43,7 @@
 									<a href="/ptfolio/pages/3D/index.html"><div id="cube"></div></a>
 								</div>
 							</div>
-							<div>
-								<a href="/ptfolio/pages/illusts/index.html" style="width: 100%;height: 100%;">
-									<div class="imgBox" leap="0.3">
-										<img src="../../images/s1.png">
-										<img src="../../images/s2.png" style="transform: translateY(-100%);">
-									</div>
-								</a>
-							</div>
+							<div></div>
 						</div>
 					</div>
 				</div>
@@ -60,5 +53,36 @@
 	</body>
 	<script src="../../js/headers.js"></script>
 	<script src="../../js/cube.js"></script>
-	<script src="toppage.js"></script>
+	<script>
+		//　背景画像
+		let images = ["pinky.gif","cmk.png","chu.png","skmdl.png"];
+		let bg = document.getElementsByClassName("HomeContainerBG").item(0);
+		let rowNum=5,colNum=10;
+		let pxColumn = parseInt(bg.clientHeight/colNum);
+		let pxRow = parseInt(bg.clientWidth/rowNum);
+		let imageIndex =0;
+		for(let i = 0; i < colNum; i++){
+			for (let j = 0; j < rowNum; j++) {
+				let cell = document.createElement("div");
+				cell.classList.add("BG-Cell");
+				cell.style.width=pxRow+"px";
+				cell.style.height=pxColumn+"px";
+				cell.style.backgroundImage =  "url(../../images/"+ images[imageIndex] +")";
+				bg.appendChild(cell);
+				imageIndex++;
+				if (imageIndex>=images.length) {
+					imageIndex=0;
+				}
+			}
+		}
+		let cells=document.getElementsByClassName("BG-Cell");
+		window.addEventListener("resize", function() {
+			pxColumn = parseInt(bg.clientHeight/colNum);
+			pxRow = parseInt(bg.clientWidth/rowNum);
+			for(let i=0;i<cells.length;i++){
+				cells[i].style.width=pxRow+"px";
+				cells[i].style.height=pxColumn+"px";
+			}
+		});
+	</script>
 </html>
